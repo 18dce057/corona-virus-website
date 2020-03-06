@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Javascript validation</title>
+     <link rel="stylesheet" type="text/css" href="1.css">
+  <script type="text/javascript">
+    function check(){
+      var name=document.forms["Rform"]["name"];
+      var email=document.forms["Rform"]["em"];
+      var pwd=document.forms["Rform"]["pwd"];
+      var cpwd=document.forms["Rform"]["cpwd"];
+      var phno=document.forms["Rform"]["phno"];
+      var address=document.forms["Rform"]["add"];
+      var subj=document.forms["Rform"]["subj"];
+
+      var cname=/^[a-zA-z]+$/;
+      var ccpwd=/^([a-zA-z0-9@!$*_]{5,12})+$/;
+      var cphno=/[0-9]{10}/;
+      if(name.value == ''){
+        window.alert("Please enter your name");
+        return false;
+      }
+      if(cname.test(name.value) == false)
+      {
+        window.alert("name must contain only letters!");
+        return false;
+      }
+      if(ccpwd.test(pwd.value)==false){
+        window.alert("enter valid password! min 5 characters & max 12 characters ");
+      }
+      if(pwd.value != cpwd.value){
+        window.alert("passwords do not match!");
+      }
+      if(address.value == ''){
+        window.alert("Please enter your address");
+        return false;
+      }
+      if(email.value.includes('@',0) == false  || email.value.includes('.',0) == false){
+        window.alert("enter valid email address ");
+      }
+      if(subj.selectedIndex()<1){
+        window.alert("select subject!");
+      }
+      if(cphno.test(phno.value) == false)
+      {
+        window.alert("Phone no can have only 10 digits");
+        return false;
+      }
+    }
+  </script>
+
+   
+  
+
+  <style type="text/css">
+     body{
+      background: url("vv1.jpg") no-repeat;
+      color: #00004d;
+      font-size: 15px;
+      font-family: Calibri;
+      font-variant: small-caps;
+      height: 600px;
+    }
+   
+    
+    .footer
+{
+   background-image: url("heartbeat.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+  color: #fff;
+  height: 200px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo"><img id="i1" src="fflogo.jpg" height="70px" width="400px" ></div>
+  <div class="list">
+    <ul>
+     <li><a href="csignin.html">Home</a></li>
+      <li><a href="main.html">log out</a></li>
+    </ul>
+    </div>
+
+</div>
+
+
+
+ 
+  <h4>&nbsp;&nbsp;&nbsp;<b><font size=20>SIGN IN</b></h4></font>
+  <form name="Rform" onsubmit="return check()" method="post">
+   <center>
+    <table cellspacing="5px 20px" cellpadding="7px" >
+      <b>
+      <tr>
+        <td>Username</td><td><input type="text" size="30" title="Please enter username" placeholder="ABcd1782" maxlength="8"  name="name" ></td></tr>
+     <tr><td>Email</td><td><input type="text" size="30" name="em" title="enter email address" placeholder="example@gmail.com"></td></tr>
+    <tr><td>Password</td><td><input type="Password" size="30" name="pwd" title="enter password" placeholder="abc2006"></td></tr>
+    <tr><td>Confirm Password</td><td><input type="Password" size="30" name="cpwd" title="enter password" placeholder="abc2006"></td></tr>
+    
+
+    </b>
+  </table>
+</center>
+   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<center><input type="submit" name="submit" value="SUBMIT" style="margin:14px 75px;padding:7px 50px; border-radius: 60px;background-color: midnightblue;color: white;font-size: 15px"></center>>
+    </form>
+
+    <br><br><br>
+<div class="footer">
+  <div class="footer-logo">Footer</div>
+  <div class="footer-list">
+    <ul>
+      <li>info</li>
+        <li>join us</li>
+        <li>about</li>
+        </ul>
+  </div>
+</div>
+</body>
+</html>

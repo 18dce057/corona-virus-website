@@ -1,0 +1,51 @@
+.header {
+  background-color:#1a1a1a ;
+  color: #fff;
+  height: 90px;
+  font-family: cursive;
+  
+}
+.header-logo
+{
+  float:left;
+  font-size:50px;
+  padding:20px 40px;
+  
+}
+
+li {
+  list-style: none;
+  padding:33px 20px;
+  float:right;
+  
+}
+.footer
+{
+   background-color:#1a1a1a ;
+  color: #fff;
+  height: 200px;
+}
+.footer-logo
+{
+  float:left;
+  font-size:36px;
+  padding:70px 40px;
+}
+.footer-list li
+{
+  float:right;
+  list-style: none;
+  padding:70px 40px;
+  font-size: 40px;
+}
+.main
+{
+  background-image: url("vv1.jpg");
+  background-size: cover;
+  
+}
+a
+{
+  text-decoration:none;
+  color:white;
+}

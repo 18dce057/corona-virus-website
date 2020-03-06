@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Javascript validation</title>
+     <link rel="stylesheet" type="text/css" href="1.css">
+  <script type="text/javascript">
+    function check(){
+      var name=document.forms["Rform"]["name"];
+      var email=document.forms["Rform"]["em"];
+      var pwd=document.forms["Rform"]["pwd"];
+      var cpwd=document.forms["Rform"]["cpwd"];
+      var phno=document.forms["Rform"]["phno"];
+      var address=document.forms["Rform"]["add"];
+      var subj=document.forms["Rform"]["subj"];
+
+      var cname=/^[a-zA-z]+$/;
+      var ccpwd=/^([a-zA-z0-9@!$*_]{5,12})+$/;
+      var cphno=/[0-9]{10}/;
+      if(name.value == ''){
+        window.alert("Please enter your name");
+        return false;
+      }
+      if(cname.test(name.value) == false)
+      {
+        window.alert("name must contain only letters!");
+        return false;
+      }
+      if(ccpwd.test(pwd.value)==false){
+        window.alert("enter valid password! min 5 characters & max 12 characters ");
+      }
+      if(pwd.value != cpwd.value){
+        window.alert("passwords do not match!");
+      }
+      if(address.value == ''){
+        window.alert("Please enter your address");
+        return false;
+      }
+      if(email.value.includes('@',0) == false  || email.value.includes('.',0) == false){
+        window.alert("enter valid email address ");
+      }
+      if(subj.selectedIndex()<1){
+        window.alert("select subject!");
+      }
+      if(cphno.test(phno.value) == false)
+      {
+        window.alert("Phone no can have only 10 digits");
+        return false;
+      }
+    }
+  </script>
+
+   
+  
+
+  <style type="text/css">
+     body{
+      background: url("vv1.jpg") no-repeat;
+      color: #00004d;
+      font-size: 15px;
+      font-family: Calibri;
+      font-variant: small-caps;
+      height: 600px;
+    }
+   
+    
+    .footer
+{
+   background-image: url("heartbeat.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+  color: #fff;
+  height: 200px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo"><img id="i1" src="fflogo.jpg" height="70px" width="400px" ></div>
+  <div class="list">
+    <ul>
+      <li><a href="file:///C:/webathon/about.html">Home</a></li>
+      <li><a href="file:///C:/webathon/main.html">log out</a></li>
+     
+    </ul>
+    </div>
+
+</div>
+<h1>ABOUT US</h1>
+  Established in 2015, Vnurture is primarily focused on Software Development and IT Industry Readiness program, primarily in the domains of Blockchain, Artificial Intelligence, Machine Learning/ Deep Learning, IoT, Cloud Technologies, Data Analytics with Python/R, Mobile and Web technologies and tools like Power BI, Tableau and advanced Excel
+  Established in 2015, Vnurture is primarily focused on Software Development and IT Industry Readiness program, primarily in the domains of Blockchain, Artificial Intelligence, Machine Learning/ Deep Learning, IoT, Cloud Technologies, Data Analytics with Python/R, Mobile and Web technologies and tools like Power BI, Tableau and advanced Excel Established in 2015, Vnurture is primarily focused on Software Development and IT Industry Readiness program, primarily in the domains of Blockchain, Artificial Intelligence, Machine Learning/ Deep Learning, IoT, Cloud Technologies, Data Analytics with Python/R, Mobile and Web technologies and tools like Power BI, Tableau and advanced Excel
+  Established in 2015, Vnurture is primarily focused on Software Development and IT Industry Readiness program, primarily in the domains of Blockchain, Artificial Intelligence, Machine Learning/ Deep Learning, IoT, Cloud Technologies, Data Analytics with Python/R, Mobile and Web technologies and tools like Power BI, Tableau and advanced Excel
+<h4>SHRADDHA MEHTA (18DCE057)</h4>
+<h4>DHRUVISHA VASOYA (18DCS133)</h4>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="footer">
+  <div class="footer-logo">Footer</div>
+  <div class="footer-list">
+    <ul>
+      <li>info</li>
+        <li>virus</li>
+        <li>about</li>
+        </ul>
+  </div>
+</div>
+</body>
+</html>
